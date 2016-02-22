@@ -1,5 +1,6 @@
 package Kirenio.TestMod;
 
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
 
 public class CoordEntry {
@@ -26,5 +27,17 @@ public class CoordEntry {
 
     public BlockPos getPos(){
         return new BlockPos(x,y,z);
+    }
+
+    public void writeEntryToNBT(NBTTagCompound nbt){
+        nbt.setString("name", name);
+        nbt.setInteger("dimension", dimension);
+        nbt.setInteger("posX", x);
+        nbt.setInteger("posY", y);
+        nbt.setInteger("posZ", z);
+    }
+
+    public static CoordEntry readEntryFromNBT(NBTTagCompound nbt){
+        return new CoordEntry(nbt.getString("name"), nbt.getInteger("dimension"),nbt.getInteger("posX"),nbt.getInteger("posY"),nbt.getInteger("posZ"));
     }
 }

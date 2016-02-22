@@ -1,5 +1,5 @@
 {
-  "parent": "tm:block/cell_injector",
+  "parent": "tm:block/basic_injector",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

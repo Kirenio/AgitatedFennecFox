@@ -1,17 +1,17 @@
 package Kirenio.TestMod;
 
 import Kirenio.TestMod.Proxy.CommonProxy;
-import Kirenio.TestMod.init.TestBlocks;
+import Kirenio.TestMod.init.TeleportTileEntities;
+import Kirenio.TestMod.init.blocks;
 import Kirenio.TestMod.init.TestItems;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.core.config.plugins.ResolverUtil;
 
 @Mod(modid = Reference.MOD_ID,name = Reference.MOD_NAME,version = Reference.VERSION)
-public class TestModClass {
+public class TestMod {
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
@@ -21,10 +21,11 @@ public class TestModClass {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        TestBlocks.init();
-        TestBlocks.register();
+        blocks.init();
+        blocks.register();
         TestItems.init();
         TestItems.register();
+        TeleportTileEntities.register();
     }
 
     @Mod.EventHandler

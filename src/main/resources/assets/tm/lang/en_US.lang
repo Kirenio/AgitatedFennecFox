@@ -1,5 +1,7 @@
 itemGroup.tabEnergy=Energy Mod
 
 item.energy_cell.name=Energy Cell
-emergency_teleport.emergency_teleport=Emergency Teleport
-tile.cell_injector.name=Cell Injector
+item.coordinates_module=Coordinates Module
+tile.basic_injector.name=Basic Cell Injector
+tile.teleport_beacon=Teleportation Beacon
+tile.transporter_platform=Transporter Platform

@@ -1,7 +1,7 @@
 package Kirenio.TestMod.init;
 
 import Kirenio.TestMod.Reference;
-import Kirenio.TestMod.TestModClass;
+import Kirenio.TestMod.TestMod;
 import Kirenio.TestMod.items.coordinates_module;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -14,8 +14,8 @@ public class TestItems {
     public static Item coordinates_module;
 
     public static void init(){
-        energy_cell = new Item().setUnlocalizedName("energy_cell").setCreativeTab(TestModClass.tabEnergy);
-        coordinates_module = new coordinates_module().setUnlocalizedName("coordinates_module").setCreativeTab(TestModClass.tabEnergy);
+        energy_cell = new Item().setUnlocalizedName("energy_cell").setCreativeTab(TestMod.tabEnergy);
+        coordinates_module = new coordinates_module().setUnlocalizedName("coordinates_module").setCreativeTab(TestMod.tabEnergy);
     }
 
     public static void register(){

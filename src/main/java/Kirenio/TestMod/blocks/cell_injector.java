@@ -3,9 +3,9 @@ package Kirenio.TestMod.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockTest extends Block{
+public class cell_injector extends Block{
 
-    public BlockTest(Material materialIn){
+    public cell_injector(Material materialIn){
         super(materialIn);
     }
 }

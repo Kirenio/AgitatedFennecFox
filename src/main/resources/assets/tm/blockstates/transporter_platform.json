@@ -1,7 +1,7 @@
 {
     "variants":{
         "normal":{
-            "model": "tm:cell_injector"
+            "model": "tm:transporter_platform"
         }
     }
 }

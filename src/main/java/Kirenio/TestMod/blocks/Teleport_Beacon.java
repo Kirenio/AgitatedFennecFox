@@ -1,14 +1,18 @@
 package Kirenio.TestMod.blocks;
 
+import Kirenio.TestMod.tileentity.TileEntityTeleport;
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumWorldBlockLayer;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class Teleport_Beacon extends Block {
+public class teleport_beacon extends Block  {
 
-    public Teleport_Beacon(Material materialIn)
+    public teleport_beacon(Material materialIn)
     {
         super(materialIn);
     }
@@ -28,6 +32,6 @@ public class Teleport_Beacon extends Block {
     @Override
     public EnumWorldBlockLayer getBlockLayer()
     {
-        return EnumWorldBlockLayer.TRANSLUCENT;
+        return EnumWorldBlockLayer.CUTOUT;
     }
 }
