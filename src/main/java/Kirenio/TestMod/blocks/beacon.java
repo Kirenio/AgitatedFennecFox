@@ -10,12 +10,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class teleport_beacon extends Block  {
+public class beacon extends Block  {
 
-    public teleport_beacon(Material materialIn)
+    public beacon(Material materialIn)
     {
         super(materialIn);
     }
+    public int testInt = 42;
 
     @Override
     public boolean isOpaqueCube()
