@@ -1,0 +1,5 @@
+itemGroup.tabEnergy=Energy Mod
+
+item.energy_cell.name=Energy Cell
+emergency_teleport.emergency_teleport=Emergency Teleport
+tile.cell_injector.name=Cell Injector
