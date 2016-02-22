@@ -1,3 +1,6 @@
+/gradle
+/gradlew
+/gradlew.bat
 # eclipse
 bin
 *.launch
@@ -19,6 +22,5 @@ build
 
 # other
 eclipse
-/.idea
 /backup
 run
