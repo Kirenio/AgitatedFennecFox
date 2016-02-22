@@ -10,9 +10,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class beacon extends Block  {
+public class teleport_beacon extends Block  {
 
-    public beacon(Material materialIn)
+    public teleport_beacon(Material materialIn)
     {
         super(materialIn);
     }

@@ -2,7 +2,7 @@ package Kirenio.TestMod.init;
 
 import Kirenio.TestMod.Reference;
 import Kirenio.TestMod.TestMod;
-import Kirenio.TestMod.blocks.beacon;
+import Kirenio.TestMod.blocks.teleport_beacon;
 import Kirenio.TestMod.blocks.cell_injector;
 import Kirenio.TestMod.blocks.transporter_platform;
 import net.minecraft.block.Block;
@@ -19,7 +19,7 @@ public class blocks {
 
     public static void init(){
         basic_injector = new cell_injector(Material.cloth).setUnlocalizedName("basic_injector").setCreativeTab(TestMod.tabEnergy);
-        teleport_beacon = new beacon(Material.cloth).setUnlocalizedName("beacon").setCreativeTab(TestMod.tabEnergy);
+        teleport_beacon = new teleport_beacon(Material.cloth).setUnlocalizedName("teleport_beacon").setCreativeTab(TestMod.tabEnergy);
         transporter_platform = new transporter_platform(Material.cloth).setUnlocalizedName("transporter_platform").setCreativeTab(TestMod.tabEnergy);
     }
 
