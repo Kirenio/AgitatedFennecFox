@@ -2,6 +2,7 @@ itemGroup.tabEnergy=Energy Mod
 
 item.energy_cell.name=Energy Cell
 item.coordinates_module=Coordinates Module
+tile.copperOre=Copper Ore
 tile.basic_injector.name=Basic Cell Injector
 tile.teleport_beacon=Teleportation Beacon
 tile.transporter_platform=Transporter Platform

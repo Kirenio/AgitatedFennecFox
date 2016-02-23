@@ -16,7 +16,6 @@ public class teleport_beacon extends Block  {
     {
         super(materialIn);
     }
-    public int testInt = 42;
 
     @Override
     public boolean isOpaqueCube()

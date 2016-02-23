@@ -3,12 +3,14 @@ package Kirenio.TestMod;
 import Kirenio.TestMod.Proxy.CommonProxy;
 import Kirenio.TestMod.init.TeleportTileEntities;
 import Kirenio.TestMod.init.blocks;
-import Kirenio.TestMod.init.TestItems;
+import Kirenio.TestMod.init.items;
+import Kirenio.TestMod.world.world_generation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID,name = Reference.MOD_NAME,version = Reference.VERSION)
 public class TestMod {
@@ -21,16 +23,19 @@ public class TestMod {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        blocks.init();
+        items.init();
+        items.register();
+        blocks.preInit();
         blocks.register();
-        TestItems.init();
-        TestItems.register();
         TeleportTileEntities.register();
+        GameRegistry.registerWorldGenerator(new world_generation(), 0);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
+
         proxy.registerRenders();
+        recipes.initRecipes();
     }
 
     @Mod.EventHandler

@@ -1,6 +1,6 @@
 package Kirenio.TestMod;
 
-import Kirenio.TestMod.init.TestItems;
+import Kirenio.TestMod.init.items;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -12,6 +12,6 @@ public class TestModTab extends CreativeTabs{
 
     @Override
     public Item getTabIconItem(){
-        return TestItems.energy_cell;
+        return items.energy_cell;
     }
 }
