@@ -1,8 +1,10 @@
 itemGroup.tabEnergy=Energy Mod
 
+item.impureCopperIngot.name=Impure Copper Ingot
+item.copperIngot.name=Copper Ingot
 item.energy_cell.name=Energy Cell
-item.coordinates_module=Coordinates Module
-tile.copperOre=Copper Ore
+item.coordinates_module.name=Coordinates Module
+tile.copperOre.name=Copper Ore
 tile.basic_injector.name=Basic Cell Injector
-tile.teleport_beacon=Teleportation Beacon
-tile.transporter_platform=Transporter Platform
+tile.teleport_beacon.name=Teleportation Beacon
+tile.transporter_platform.name=Transporter Platform

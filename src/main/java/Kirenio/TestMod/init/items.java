@@ -13,10 +13,12 @@ public class items {
 
     public static Item energy_cell;
     public static Item coordinates_module;
+    public static Item impureCopperIngot;
     public static Item copperIngot;
 
     public static void init(){
         copperIngot = new Item().setUnlocalizedName("copperIngot").setCreativeTab(TestMod.tabEnergy);
+        impureCopperIngot = new Item().setUnlocalizedName("impureCopperIngot").setCreativeTab(TestMod.tabEnergy);
         energy_cell = new Item().setUnlocalizedName("energy_cell").setCreativeTab(TestMod.tabEnergy);
         coordinates_module = new coordinates_module().setUnlocalizedName("coordinates_module").setCreativeTab(TestMod.tabEnergy);
     }
@@ -25,12 +27,14 @@ public class items {
         GameRegistry.registerItem(copperIngot, copperIngot.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(energy_cell, energy_cell.getUnlocalizedName().substring(5)); // Substring(5) will remove the "tile." from tile.energy_cell returned by .getUnlocalizedName()
         GameRegistry.registerItem(coordinates_module, coordinates_module.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(impureCopperIngot, impureCopperIngot.getUnlocalizedName().substring(5));
     }
 
     public static void registerRenders(){
         registerRender(copperIngot);
         registerRender(energy_cell);
         registerRender(coordinates_module);
+        registerRender(impureCopperIngot);
     }
 
     public static void registerRender(Item item){
