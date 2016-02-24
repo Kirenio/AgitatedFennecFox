@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "tm:blocks/copperOre"
+    "all": "tm:blocks/oreCopper"
   }
 }

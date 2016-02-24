@@ -10,14 +10,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class blocks {
-    public static Block copperOre;
+    public static Block oreCopper;
     public static Block basic_injector;
     public static Block teleport_beacon;
     public static Block transporter_platform;
@@ -27,18 +25,22 @@ public class blocks {
         basic_injector = new cell_injector(Material.cloth).setUnlocalizedName("basic_injector").setCreativeTab(TestMod.tabEnergy);
         teleport_beacon = new teleport_beacon(Material.cloth).setUnlocalizedName("teleport_beacon").setCreativeTab(TestMod.tabEnergy);
         transporter_platform = new transporter_platform(Material.cloth).setUnlocalizedName("transporter_platform").setCreativeTab(TestMod.tabEnergy);
-        copperOre = new ore(Material.rock).setUnlocalizedName("copperOre").setHardness(4f).setResistance(6f);
+        oreCopper = new ore(Material.rock).setUnlocalizedName("oreCopper").setHardness(4f).setResistance(6f);
     }
 
     public static void register(){
-        GameRegistry.registerBlock(copperOre, copperOre.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(oreCopper, oreCopper.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(basic_injector, basic_injector.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(teleport_beacon, teleport_beacon.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(transporter_platform, transporter_platform.getUnlocalizedName().substring(5));
     }
 
+    public static void registerOreDict(){
+        OreDictionary.registerOre("oreCopper", oreCopper);
+    }
+
     public static void registerRenders(){
-        registerRender(copperOre);
+        registerRender(oreCopper);
         registerRender(basic_injector);
         registerRender(teleport_beacon);
         registerRender(transporter_platform);

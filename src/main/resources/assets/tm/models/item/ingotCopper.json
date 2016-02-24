@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "tm:items/copperIngot"
+        "layer0": "tm:items/ingotCopper"
     },
     "display": {
         "thirdperson": {

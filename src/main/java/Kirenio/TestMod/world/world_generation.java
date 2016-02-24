@@ -1,6 +1,5 @@
 package Kirenio.TestMod.world;
 
-import Kirenio.TestMod.TestMod;
 import Kirenio.TestMod.init.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.pattern.BlockHelper;
@@ -9,7 +8,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 import java.util.Random;
@@ -28,7 +26,7 @@ public class world_generation implements IWorldGenerator {
     }
 
     public void generateOverworld(World world,  Random random, int x, int z){
-        generateOre(blocks.copperOre, world, random, x, z, 4, 8, 15, 2, 250, Blocks.stone);
+        generateOre(blocks.oreCopper, world, random, x, z, 4, 8, 15, 2, 250, Blocks.stone);
     }
 
     public void generateNether(){
@@ -38,7 +36,7 @@ public class world_generation implements IWorldGenerator {
     }
 
     public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVeinSize, int maxVeinSize, int chance, int minY, int maxY, Block generateIn){
-        if(minY < 1 || maxY > 255 || minY > maxY) throw new IllegalArgumentException("Illigal height arguments for WorldGenerator");
+        if(minY < 1 || maxY > 255 || minY > maxY) throw new IllegalArgumentException("Illegal height arguments for WorldGenerator");
 
         int veinSize = minVeinSize + random.nextInt(maxVeinSize - minVeinSize);
         int heightRange = maxY - minY + 1;

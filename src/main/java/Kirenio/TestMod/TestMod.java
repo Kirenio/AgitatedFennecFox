@@ -27,6 +27,8 @@ public class TestMod {
         items.register();
         blocks.preInit();
         blocks.register();
+        items.registerOreDict();
+        blocks.registerOreDict();
         TeleportTileEntities.register();
         GameRegistry.registerWorldGenerator(new world_generation(), 0);
     }
