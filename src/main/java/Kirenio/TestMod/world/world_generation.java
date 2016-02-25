@@ -27,6 +27,7 @@ public class world_generation implements IWorldGenerator {
 
     public void generateOverworld(World world,  Random random, int x, int z){
         generateOre(blocks.oreCopper, world, random, x, z, 4, 8, 15, 2, 250, Blocks.stone);
+        generateOre(blocks.oreTin, world, random, x, z, 5, 10, 18, 20, 254, Blocks.stone);
     }
 
     public void generateNether(){
