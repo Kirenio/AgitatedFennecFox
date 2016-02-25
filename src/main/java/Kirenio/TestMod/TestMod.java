@@ -1,6 +1,7 @@
 package Kirenio.TestMod;
 
 import Kirenio.TestMod.Proxy.CommonProxy;
+import Kirenio.TestMod.achievements.Achievements;
 import Kirenio.TestMod.init.TeleportTileEntities;
 import Kirenio.TestMod.init.blocks;
 import Kirenio.TestMod.init.items;
@@ -31,6 +32,7 @@ public class TestMod {
         blocks.registerOreDict();
         TeleportTileEntities.register();
         GameRegistry.registerWorldGenerator(new world_generation(), 0);
+        Achievements.initAchievements();
     }
 
     @Mod.EventHandler
@@ -38,6 +40,7 @@ public class TestMod {
 
         proxy.registerRenders();
         recipes.initRecipes();
+        Achievements.initAchievementsPage();
     }
 
     @Mod.EventHandler
