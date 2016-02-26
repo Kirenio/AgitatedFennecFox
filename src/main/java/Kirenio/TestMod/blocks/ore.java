@@ -1,13 +1,13 @@
 package Kirenio.TestMod.blocks;
 
 import Kirenio.TestMod.TestMod;
-import jdk.nashorn.internal.objects.annotations.Constructor;
+import Kirenio.TestMod.init.blocks;
+import Kirenio.TestMod.init.items;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
-import org.apache.logging.log4j.core.config.plugins.ResolverUtil;
 
 import java.util.Random;
 
@@ -20,6 +20,11 @@ public class ore extends Block{
 
     @Override
     public Item getItemDropped(IBlockState blockState, Random random, int fortune){
-        return  Item.getItemFromBlock(this);
+        return this == blocks.oreHeberum ? items.shardHeberum : (this == blocks.oreImpetum ? items.shardImpetum : Item.getItemFromBlock(this));
+    }
+
+    @Override
+    public int quantityDropped(Random random){
+        return this == blocks.oreHeberum ? 2 + random.nextInt(2) : (this == blocks.oreImpetum ? 2 + random.nextInt(3) : 1);
     }
 }

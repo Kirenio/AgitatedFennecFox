@@ -11,15 +11,27 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class items {
 
-    public static Item energy_cell;
-    public static Item coordinates_module;
+    public static Item shardHeberum;
+    public static Item gemHeberum;
+    public static Item dustHeberum;
+    public static Item shardImpetum;
+    public static Item gemImpetum;
+    public static Item dustImpetum;
     public static Item impureCopperIngot;
     public static Item ingotCopper;
     public static Item dustCopper;
     public static Item ingotTin;
     public static Item dustTin;
+    public static Item energy_cell;
+    public static Item coordinates_module;
 
     public static void init(){
+        shardHeberum = new Item().setUnlocalizedName("shardHeberum").setCreativeTab(TestMod.tabEnergy);
+        gemHeberum = new Item().setUnlocalizedName("gemHeberum").setCreativeTab(TestMod.tabEnergy);
+        dustHeberum = new Item().setUnlocalizedName("dustHeberum").setCreativeTab(TestMod.tabEnergy);
+        shardImpetum = new Item().setUnlocalizedName("shardImpetum").setCreativeTab(TestMod.tabEnergy);
+        gemImpetum = new Item().setUnlocalizedName("gemImpetum").setCreativeTab(TestMod.tabEnergy);
+        dustImpetum = new Item().setUnlocalizedName("dustImpetum").setCreativeTab(TestMod.tabEnergy);
         ingotCopper = new Item().setUnlocalizedName("ingotCopper").setCreativeTab(TestMod.tabEnergy);
         dustCopper = new Item().setUnlocalizedName("dustCopper").setCreativeTab(TestMod.tabEnergy);
         ingotTin = new Item().setUnlocalizedName("ingotTin").setCreativeTab(TestMod.tabEnergy);
@@ -30,6 +42,12 @@ public class items {
     }
 
     public static void register(){
+        GameRegistry.registerItem(shardHeberum,shardHeberum.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(gemHeberum,gemHeberum.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(dustHeberum,dustHeberum.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(shardImpetum,shardImpetum.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(gemImpetum,gemImpetum.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(dustImpetum,dustImpetum.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(ingotCopper, ingotCopper.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(dustCopper, dustCopper.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(ingotTin, ingotTin.getUnlocalizedName().substring(5));
@@ -40,6 +58,12 @@ public class items {
     }
 
     public static void registerOreDict(){
+        OreDictionary.registerOre("shardHeberum", shardHeberum);
+        OreDictionary.registerOre("gemHeberum", gemHeberum);
+        OreDictionary.registerOre("dustHeberum", dustHeberum);
+        OreDictionary.registerOre("shardImpetum", shardImpetum);
+        OreDictionary.registerOre("gemImpetum", gemImpetum);
+        OreDictionary.registerOre("dustImpetum", dustImpetum);
         OreDictionary.registerOre("ingotCopper", ingotCopper);
         OreDictionary.registerOre("dustCopper", dustCopper);
         OreDictionary.registerOre("ingotTin", ingotTin);
@@ -47,6 +71,12 @@ public class items {
     }
 
     public static void registerRenders(){
+        registerRender(shardHeberum);
+        registerRender(gemHeberum);
+        registerRender(dustHeberum);
+        registerRender(shardImpetum);
+        registerRender(gemImpetum);
+        registerRender(dustImpetum);
         registerRender(ingotCopper);
         registerRender(ingotTin);
         registerRender(energy_cell);
